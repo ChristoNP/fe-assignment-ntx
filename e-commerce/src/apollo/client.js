@@ -1,5 +1,4 @@
 import { ApolloClient, createHttpLink, InMemoryCache } from "@apollo/client";
-import { provideApolloClient } from "@vue/apollo-composable";
 
 const httpLink = createHttpLink({
     uri: 'https://sirefcode.hasura.app/v1/graphql',
@@ -9,10 +8,7 @@ const httpLink = createHttpLink({
     }
 })
 
-const apolloClient = new ApolloClient({
+export const apolloClient = new ApolloClient({
     link: httpLink,
     cache: new InMemoryCache()
 })
-
-provideApolloClient(apolloClient)
-export default apolloClient
