@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.12.5",
+    "@urql/vue": "^1.4.2",
     "@vue/apollo-composable": "^4.2.1",
     "graphql": "^16.10.0",
     "pinia": "^2.3.0",
